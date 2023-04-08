@@ -1,0 +1,12 @@
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\bin\Debug\net7.0\QuickSalesApp.Domain.deps.json
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\bin\Debug\net7.0\QuickSalesApp.Domain.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\bin\Debug\net7.0\QuickSalesApp.Domain.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\obj\Debug\net7.0\QuickSalesApp.Domain.csproj.AssemblyReference.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\obj\Debug\net7.0\QuickSalesApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\obj\Debug\net7.0\QuickSalesApp.Domain.AssemblyInfoInputs.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\obj\Debug\net7.0\QuickSalesApp.Domain.AssemblyInfo.cs
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\obj\Debug\net7.0\QuickSalesApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\obj\Debug\net7.0\QuickSalesApp.Domain.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\obj\Debug\net7.0\refint\QuickSalesApp.Domain.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\obj\Debug\net7.0\QuickSalesApp.Domain.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Domain\obj\Debug\net7.0\ref\QuickSalesApp.Domain.dll

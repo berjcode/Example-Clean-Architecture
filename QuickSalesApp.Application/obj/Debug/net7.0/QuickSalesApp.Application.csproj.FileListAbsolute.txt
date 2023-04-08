@@ -1,0 +1,15 @@
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\bin\Debug\net7.0\QuickSalesApp.Application.deps.json
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\bin\Debug\net7.0\QuickSalesApp.Application.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\bin\Debug\net7.0\QuickSalesApp.Application.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\obj\Debug\net7.0\QuickSalesApp.Application.csproj.AssemblyReference.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\obj\Debug\net7.0\QuickSalesApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\obj\Debug\net7.0\QuickSalesApp.Application.AssemblyInfoInputs.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\obj\Debug\net7.0\QuickSalesApp.Application.AssemblyInfo.cs
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\obj\Debug\net7.0\QuickSalesApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\obj\Debug\net7.0\QuickSalesApp.Application.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\obj\Debug\net7.0\refint\QuickSalesApp.Application.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\obj\Debug\net7.0\QuickSalesApp.Application.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\obj\Debug\net7.0\ref\QuickSalesApp.Application.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\bin\Debug\net7.0\QuickSalesApp.Domain.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\bin\Debug\net7.0\QuickSalesApp.Domain.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Application\obj\Debug\net7.0\QuickSalesApp.Application.csproj.CopyComplete

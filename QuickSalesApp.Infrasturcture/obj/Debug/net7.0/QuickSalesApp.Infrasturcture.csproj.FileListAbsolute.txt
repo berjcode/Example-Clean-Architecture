@@ -1,0 +1,17 @@
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\bin\Debug\net7.0\QuickSalesApp.Infrasturcture.deps.json
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\bin\Debug\net7.0\QuickSalesApp.Infrasturcture.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\bin\Debug\net7.0\QuickSalesApp.Infrasturcture.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\obj\Debug\net7.0\QuickSalesApp.Infrasturcture.csproj.AssemblyReference.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\obj\Debug\net7.0\QuickSalesApp.Infrasturcture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\obj\Debug\net7.0\QuickSalesApp.Infrasturcture.AssemblyInfoInputs.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\obj\Debug\net7.0\QuickSalesApp.Infrasturcture.AssemblyInfo.cs
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\obj\Debug\net7.0\QuickSalesApp.Infrasturcture.csproj.CoreCompileInputs.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\obj\Debug\net7.0\QuickSalesApp.Infrasturcture.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\obj\Debug\net7.0\refint\QuickSalesApp.Infrasturcture.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\obj\Debug\net7.0\QuickSalesApp.Infrasturcture.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\obj\Debug\net7.0\ref\QuickSalesApp.Infrasturcture.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\bin\Debug\net7.0\QuickSalesApp.Application.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\bin\Debug\net7.0\QuickSalesApp.Domain.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\bin\Debug\net7.0\QuickSalesApp.Application.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\bin\Debug\net7.0\QuickSalesApp.Domain.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Infrasturcture\obj\Debug\net7.0\QuickSalesApp.Infrasturcture.csproj.CopyComplete

@@ -1,0 +1,17 @@
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\bin\Debug\net7.0\QuickSalesApp.Presentation.deps.json
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\bin\Debug\net7.0\QuickSalesApp.Presentation.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\bin\Debug\net7.0\QuickSalesApp.Presentation.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\obj\Debug\net7.0\QuickSalesApp.Presentation.csproj.AssemblyReference.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\obj\Debug\net7.0\QuickSalesApp.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\obj\Debug\net7.0\QuickSalesApp.Presentation.AssemblyInfoInputs.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\obj\Debug\net7.0\QuickSalesApp.Presentation.AssemblyInfo.cs
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\obj\Debug\net7.0\QuickSalesApp.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\obj\Debug\net7.0\QuickSalesApp.Presentation.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\obj\Debug\net7.0\refint\QuickSalesApp.Presentation.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\obj\Debug\net7.0\QuickSalesApp.Presentation.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\obj\Debug\net7.0\ref\QuickSalesApp.Presentation.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\bin\Debug\net7.0\QuickSalesApp.Application.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\bin\Debug\net7.0\QuickSalesApp.Application.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\obj\Debug\net7.0\QuickSalesApp.Presentation.csproj.CopyComplete
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\bin\Debug\net7.0\QuickSalesApp.Domain.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.Presentation\bin\Debug\net7.0\QuickSalesApp.Domain.pdb
