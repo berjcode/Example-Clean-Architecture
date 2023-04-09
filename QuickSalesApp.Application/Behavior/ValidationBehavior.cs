@@ -16,9 +16,10 @@ namespace QuickSalesApp.Application.Behavior
             _validators = validators;
         }
 
-        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
+        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next,
+            CancellationToken cancellationToken)
         {
-            if (_validators.Any())
+            if (!_validators.Any())
             {
                 return await next();
             }
@@ -26,7 +27,8 @@ namespace QuickSalesApp.Application.Behavior
 
             var context = new ValidationContext<TRequest>(request);
 
-            var errorDictinary = _validators.Select(x => x.Validate(context))
+            var errorDictinary = _validators
+                .Select(x => x.Validate(context))
                 .SelectMany(x => x.Errors)
                 .Where(x => x != null)
                 .GroupBy(
@@ -35,7 +37,8 @@ namespace QuickSalesApp.Application.Behavior
                 {
                     Key = propertyName,
                     Values = errorMessage.Distinct().ToArray()
-                }).ToDictionary(x => x.Key, x => x.Values[0]);
+                })
+                .ToDictionary(x => x.Key, x => x.Values[0]);
 
 
             if (errorDictinary.Any())

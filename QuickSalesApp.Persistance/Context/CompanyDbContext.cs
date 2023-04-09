@@ -2,11 +2,7 @@
 using Microsoft.EntityFrameworkCore.Design;
 using QuickSalesApp.Domain.Abstractions;
 using QuickSalesApp.Domain.AppEntities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace QuickSalesApp.Persistance.Context
 {
@@ -21,7 +17,7 @@ namespace QuickSalesApp.Persistance.Context
          
            if(company != null)
             {
-                if (company.UserId == "")
+                if (company.ServerUserId == "")
                     ConnectionString = $"server={company.ServerName};" +
                        $"Initial Catalog={company.DatabaseName};Integrated Security=True" +
                        $";Connect Timeout=30;Encrypt=False;" +
@@ -29,7 +25,7 @@ namespace QuickSalesApp.Persistance.Context
                 else
                     ConnectionString = $"server={company.ServerName};" +
                         $"Initial Catalog={company.DatabaseName};" +
-                        $"User Id={company.UserId};Password={company.Password};Integrated Security=True" +
+                        $"User Id={company.ServerUserId};Password={company.ServerPassword};Integrated Security=True" +
                        $";Connect Timeout=30;Encrypt=False;" +
                        $"TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 

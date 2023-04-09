@@ -1,4 +1,3 @@
-
 using Microsoft.AspNetCore.Identity;
 using QuickSalesApp.Domain.AppEntities.Identity;
 using QuickSalesApp.WebApi.Configurations;

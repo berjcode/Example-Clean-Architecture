@@ -1,5 +1,4 @@
-﻿using MediatR;
-using QuickSalesApp.Application.Messaging;
+﻿using QuickSalesApp.Application.Messaging;
 using QuickSalesApp.Application.Services.AppServices;
 using QuickSalesApp.Domain.AppEntities.Identity;
 

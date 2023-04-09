@@ -28,16 +28,16 @@ namespace QuickSalesApp.Persistance.Services.AppServices
             _mapper = mapper;
         }
 
-        public async Task CreateCompany(CreateCompanyCommand request)
+        public async Task CreateCompany(CreateCompanyCommand request, CancellationToken cancellationToken)
         {
             Company company = _mapper.Map<Company>(request);
             company.Id = Guid.NewGuid().ToString();
             company.UpdateDate = null;
             company.CreatedDate = DateTime.Now;
 
-            await _context.Set<Company>().AddAsync(company);
+            await _context.Set<Company>().AddAsync(company,cancellationToken);
 
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(cancellationToken);
         }
 
         public async Task<Company?> GetCompanyByName(string name)

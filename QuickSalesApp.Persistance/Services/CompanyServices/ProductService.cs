@@ -17,7 +17,8 @@ namespace QuickSalesApp.Persistance.Services.CompanyServices
         private CompanyDbContext _context;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public ProductService(IProductCommandRepository commandRepository, IContextService contextService, IUnitOfWork unitOfWork, IMapper mapper)
+        public ProductService(IProductCommandRepository commandRepository, IContextService contextService
+            , IUnitOfWork unitOfWork, IMapper mapper)
         {
             _commandRepository = commandRepository;
             _contextService = contextService;
@@ -25,21 +26,17 @@ namespace QuickSalesApp.Persistance.Services.CompanyServices
             _mapper = mapper;
         }
 
-        public async Task CreateProductAsync(CreateProductCommand request)
+        public async Task CreateProductAsync(CreateProductCommand request, CancellationToken cancellationToken)
         {
             _context = (CompanyDbContext)_contextService.CreateDbContextInstance(request.CompanyId);
             _commandRepository.SetDbContextInstance(_context);
-
-           _unitOfWork.SetDbContextInstance(_context);
-
+            _unitOfWork.SetDbContextInstance(_context);
             Product product = _mapper.Map<Product>(request);
-            
-            
-            await _commandRepository.AddAsync(product);
-            await _unitOfWork.SaveChangesAsync();
 
+            await _commandRepository.AddAsync(product, cancellationToken);
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
         }
 
-      
+
     }
 }

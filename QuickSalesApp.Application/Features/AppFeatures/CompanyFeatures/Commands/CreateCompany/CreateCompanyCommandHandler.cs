@@ -17,7 +17,7 @@ namespace QuickSalesApp.Application.Features.AppFeatures.CompanyFeatures.Command
         {
             Company company = await _companyService.GetCompanyByName(request.Name);
             if (company != null) throw new Exception("Bu şirket Kayıtı yapılmıştır.");
-            await _companyService.CreateCompany(request);
+            await _companyService.CreateCompany(request,cancellationToken);
             return new();
         }
     }

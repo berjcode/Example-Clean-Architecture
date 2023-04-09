@@ -14,9 +14,9 @@ namespace QuickSalesApp.Presentation.Controller.Companies
 
         [HttpPost("[action]")]
 
-        public async Task<IActionResult> CreateCompany(CreateCompanyCommand request)
+        public async Task<IActionResult> CreateCompany(CreateCompanyCommand request, CancellationToken cancellationToken)
         {
-            CreateCompanyCommandResponse response = await _mediator.Send(request);
+            CreateCompanyCommandResponse response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
 
         }
@@ -31,6 +31,7 @@ namespace QuickSalesApp.Presentation.Controller.Companies
             MigrateCompanyDatabaseCommandResponse response = await _mediator.Send(request);
             return Ok(response);
         }
+
 
     }
 }
