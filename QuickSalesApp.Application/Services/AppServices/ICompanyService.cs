@@ -6,7 +6,7 @@ namespace QuickSalesApp.Application.Services.AppServices
 {
     public interface ICompanyService
     {
-        Task CreateCompany(CreateCompanyRequest request);
+        Task CreateCompany(CreateCompanyCommand request);
         Task MigrateCompanyDatabases();
         Task<Company?> GetCompanyByName(string name);
 

@@ -2,26 +2,27 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using QuickSalesApp.Application.Abstractions;
+using QuickSalesApp.Application.Messaging;
 using QuickSalesApp.Domain.AppEntities.Identity;
 
 namespace QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Login
 {
-    public class LoginHandler : IRequestHandler<LoginRequest, LoginResponse>
+    public class LoginCommandHandler : ICommandHandler<LoginCommand, LoginCommandResponse>
     {
         private readonly IJwtProvider _jwtProvider;
         private readonly UserManager<AppUser> _userManager;
 
-        public LoginHandler(IJwtProvider jwtProvider, UserManager<AppUser> userManager)
+        public LoginCommandHandler(IJwtProvider jwtProvider, UserManager<AppUser> userManager)
         {
             _jwtProvider = jwtProvider;
             _userManager = userManager;
         }
 
-        public async Task<LoginResponse> Handle(LoginRequest request, CancellationToken cancellationToken)
+        public async Task<LoginCommandResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
-         AppUser user =   await _userManager.Users
-                .Where(p => p.Email == request.EmailAndUserName || p.UserName== request.EmailAndUserName)
-                .FirstOrDefaultAsync();
+            AppUser user = await _userManager.Users
+                   .Where(p => p.Email == request.EmailAndUserName || p.UserName == request.EmailAndUserName)
+                   .FirstOrDefaultAsync();
 
             if (user == null) throw new Exception("Kullanıcı Bulunamadı");
 
@@ -29,17 +30,14 @@ namespace QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Login
             if (!checkUser) throw new Exception("Şifreniz Yanlış");
 
             List<string> roles = new();
-            LoginResponse response = new()
-            {
-                Email = user.Email,
-                Name = user.UserName,
-                Surname = user.UserName,
-                UserId = user.Id,
-                Token = await _jwtProvider.CreateTokenAsync(user, roles)
-            };
+            LoginCommandResponse response = new(
+                user.Email,
+                user.UserName,
+                user.SurName,
+                user.Id,
+               await _jwtProvider.CreateTokenAsync(user, roles));
 
             return response;
-           
         }
     }
 }

@@ -11,9 +11,9 @@ namespace QuickSalesApp.Persistance.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<CreateCompanyRequest, Company>().ReverseMap();
-            CreateMap<CreateProductRequest, Product>().ReverseMap();
-            CreateMap<CreateRoleRequest, AppRole>().ReverseMap();
+            CreateMap<CreateCompanyCommand, Company>().ReverseMap();
+            CreateMap<CreateProductCommand, Product>().ReverseMap();
+            CreateMap<CreateRoleCommand, AppRole>().ReverseMap();
          
 
 

@@ -4,7 +4,7 @@ namespace QuickSalesApp.Application.Services.CompanyService
 {
    public  interface IProductService
     {
-        Task CreateProductAsync(CreateProductRequest request);
+        Task CreateProductAsync(CreateProductCommand request);
 
     }
 }

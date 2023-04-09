@@ -2231,6 +2231,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "FluentValidation": "11.5.2",
           "MediatR": "11.0.0",
           "QuickSalesApp.Domain": "1.0.0"
         },

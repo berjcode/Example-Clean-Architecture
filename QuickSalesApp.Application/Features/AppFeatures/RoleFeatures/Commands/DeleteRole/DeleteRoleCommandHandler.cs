@@ -1,20 +1,19 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Identity;
+﻿using QuickSalesApp.Application.Messaging;
 using QuickSalesApp.Application.Services.AppServices;
 using QuickSalesApp.Domain.AppEntities.Identity;
 
 namespace QuickSalesApp.Application.Features.AppFeatures.RoleFeatures.Commands.DeleteRole
 {
-    public sealed class DeleteRoleHandler : IRequestHandler<DeleteRoleRequest, DeleteRoleResponse>
+    public sealed class DeleteRoleCommandHandler : ICommandHandler<DeleteRoleCommand, DeleteRoleCommandResponse>
     {
         private readonly IRoleService _roleService;
 
-        public DeleteRoleHandler(IRoleService roleService)
+        public DeleteRoleCommandHandler(IRoleService roleService)
         {
             _roleService = roleService;
         }
 
-        public async Task<DeleteRoleResponse> Handle(DeleteRoleRequest request, CancellationToken cancellationToken)
+        public async Task<DeleteRoleCommandResponse> Handle(DeleteRoleCommand request, CancellationToken cancellationToken)
         {
             AppRole role = await _roleService.GetById(request.Id);
             if (role == null) throw new Exception("Role Bulunamadı");

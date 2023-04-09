@@ -1,22 +1,20 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using QuickSalesApp.Application.Messaging;
 using QuickSalesApp.Application.Services.AppServices;
 using QuickSalesApp.Domain.AppEntities.Identity;
 
 
 namespace QuickSalesApp.Application.Features.AppFeatures.RoleFeatures.Commands.UpdateRole
 {
-    public sealed class UpdateRoleHandler : IRequestHandler<UpdateRoleRequest, UpdateRoleResponse>
+    public sealed class UpdateRoleCommandHandler : ICommandHandler<UpdateRoleCommand, UpdateRoleCommandResponse>
     {
         private readonly IRoleService _roleService;
 
-        public UpdateRoleHandler(IRoleService roleService)
+        public UpdateRoleCommandHandler(IRoleService roleService)
         {
             _roleService = roleService;
         }
 
-        public async Task<UpdateRoleResponse> Handle(UpdateRoleRequest request, CancellationToken cancellationToken)
+        public async Task<UpdateRoleCommandResponse> Handle(UpdateRoleCommand request, CancellationToken cancellationToken)
         {
             AppRole role = await _roleService.GetById(request.Id);
             if (role == null) throw new Exception("Role Bulunamadı");

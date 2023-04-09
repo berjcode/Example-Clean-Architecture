@@ -1214,6 +1214,7 @@
       },
       "QuickSalesApp.Application/1.0.0": {
         "dependencies": {
+          "FluentValidation": "11.5.2",
           "MediatR": "12.0.1",
           "QuickSalesApp.Domain": "1.0.0"
         },

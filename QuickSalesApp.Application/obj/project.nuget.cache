@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jJsAuqpbMzDXS/L5xRf0PMVzSSQEftFSg/WNsnuUITe2phC+i5mPx8RjUidX6dRHAVTpCuc4Nxm0FKtCc64B8w==",
+  "dgSpecHash": "ibRmXnSvR1LxttkqKxwvFF4Iis6gmTfXIFzqEwtoQyETNSdzWuHaQN6IsRBHg238ijO55lE6OZWGHEuyG+NI9Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\abdbl\\OneDrive\\Masaüstü\\QuickSalesApp\\QuickSalesApp.Application\\QuickSalesApp.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\abdbl\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\abdbl\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\abdbl\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\abdbl\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.4\\microsoft.aspnetcore.cryptography.internal.7.0.4.nupkg.sha512",

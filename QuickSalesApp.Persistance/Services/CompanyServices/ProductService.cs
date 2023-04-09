@@ -25,7 +25,7 @@ namespace QuickSalesApp.Persistance.Services.CompanyServices
             _mapper = mapper;
         }
 
-        public async Task CreateProductAsync(CreateProductRequest request)
+        public async Task CreateProductAsync(CreateProductCommand request)
         {
             _context = (CompanyDbContext)_contextService.CreateDbContextInstance(request.CompanyId);
             _commandRepository.SetDbContextInstance(_context);

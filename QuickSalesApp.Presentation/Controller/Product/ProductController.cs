@@ -16,9 +16,9 @@ namespace QuickSalesApp.Presentation.Controller.Product
 
         [HttpPost("[action]")]
 
-        public async Task<IActionResult> CreateProduct(CreateProductRequest request)
+        public async Task<IActionResult> CreateProduct(CreateProductCommand request)
         {
-            CreateProductResponse response = await _mediator.Send(request);
+            CreateProductCommandResponse response = await _mediator.Send(request);
             return Ok(response);
         }
     }

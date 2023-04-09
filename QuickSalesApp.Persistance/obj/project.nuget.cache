@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "RX6ltlaFRsWYEYmViexV7O6mCsZZcNw5aD67qDAzAtDH0CMUZEukWi/ePFGdjQjRTQMeJ1v6DrtH9FRzsH5bew==",
+  "dgSpecHash": "BRBOaO+wi1kooTvz6mwd9JEV1Tb5FpOK2154XvXW7uBwnU/Cp3YLL8yoERwKFjXPcMtbsqAAOg6dtCK83y0piQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\abdbl\\OneDrive\\Masaüstü\\QuickSalesApp\\QuickSalesApp.Persistance\\QuickSalesApp.Persistance.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdbl\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\abdbl\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\abdbl\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\abdbl\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\abdbl\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\abdbl\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\abdbl\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

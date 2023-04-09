@@ -23,7 +23,7 @@ namespace QuickSalesApp.Persistance.Services.AppServices
             _roleManager = roleManager;
         }
 
-        public async Task AddAsync(CreateRoleRequest request)
+        public async Task AddAsync(CreateRoleCommand request)
         {
             AppRole role =  _mapper.Map<AppRole>(request);
             role.Id = Guid.NewGuid().ToString();
