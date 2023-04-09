@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-namespace QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Login
+
+namespace QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Commands.Login
 {
     public sealed record LoginCommandResponse(
 

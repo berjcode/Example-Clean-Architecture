@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\AppFeatures\AppUserFeatures\Queryies\" />
     <Folder Include="Features\AppFeatures\CompanyFeatures\Queries\" />
   </ItemGroup>
 

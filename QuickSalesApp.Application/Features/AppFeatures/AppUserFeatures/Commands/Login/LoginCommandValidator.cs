@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Login
+namespace QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Commands.Login
 {
     public sealed class LoginCommandValidator : AbstractValidator<LoginCommand>
     {
@@ -15,7 +15,7 @@ namespace QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Login
                 .WithMessage("Şifre Boş Olamaz");
             RuleFor(p => p.Password).NotEmpty()
                 .WithMessage("Şifre Boş Olamaz");
-            RuleFor(p=> p.Password).MinimumLength(4).WithMessage("Şifre en az 4 karakter olabilir.");
+            RuleFor(p => p.Password).MinimumLength(4).WithMessage("Şifre en az 4 karakter olabilir.");
             RuleFor(p => p.Password).Matches("[A-Z]").WithMessage("Şifre en az 1 büyük karakter  olmalıdır.");
             RuleFor(p => p.Password).Matches("[a-z]").WithMessage("Şifre en az 1 küçük karakter  olmalıdır.");
             RuleFor(p => p.Password).Matches("[0-9]").WithMessage("Şifreniz en az 1 adet sayı içermelidir.");

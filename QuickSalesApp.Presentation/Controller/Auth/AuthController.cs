@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Login;
+using QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Commands.Login;
 using QuickSalesApp.Presentation.Abstraction;
 using System;
 using System.Collections.Generic;

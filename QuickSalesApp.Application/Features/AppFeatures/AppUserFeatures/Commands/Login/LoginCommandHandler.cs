@@ -5,7 +5,7 @@ using QuickSalesApp.Application.Abstractions;
 using QuickSalesApp.Application.Messaging;
 using QuickSalesApp.Domain.AppEntities.Identity;
 
-namespace QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Login
+namespace QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Commands.Login
 {
     public class LoginCommandHandler : ICommandHandler<LoginCommand, LoginCommandResponse>
     {
