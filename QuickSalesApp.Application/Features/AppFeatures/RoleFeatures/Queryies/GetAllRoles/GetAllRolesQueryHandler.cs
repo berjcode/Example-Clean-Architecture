@@ -8,7 +8,7 @@ namespace QuickSalesApp.Application.Features.AppFeatures.RoleFeatures.Queryies.G
     public sealed class GetAllRolesQueryHandler : IQueryHandler<GetAllRolesQuery, GetAllRolesQueryResponse>
     {
         private readonly IRoleService _roleService;
-
+         
         public GetAllRolesQueryHandler(IRoleService roleService)
         {
             _roleService = roleService;
