@@ -22,7 +22,8 @@ namespace QuickSalesApp.Persistance.Context
 
         public DbSet<Company> Companies { get; set; }
         public DbSet<UserAndCompanyRelationship> UserAndCompanyRelationships { get; set; }
-
+        public DbSet<MainRole> MainRoles { get; set; }
+        public DbSet<MainRoleAndRoleRelationShip> MainAndRoleRelationShips { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
