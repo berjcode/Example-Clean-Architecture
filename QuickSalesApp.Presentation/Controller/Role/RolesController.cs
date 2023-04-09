@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using QuickSalesApp.Application.Features.AppFeatures.RoleFeatures.Commands.CreateAllRole;
 using QuickSalesApp.Application.Features.AppFeatures.RoleFeatures.Commands.CreateRole;
 using QuickSalesApp.Application.Features.AppFeatures.RoleFeatures.Commands.DeleteRole;
 using QuickSalesApp.Application.Features.AppFeatures.RoleFeatures.Commands.UpdateRole;
@@ -48,6 +49,15 @@ namespace QuickSalesApp.Presentation.Controller.Role
             DeleteRoleCommand request = new(id);
 
             DeleteRoleCommandResponse response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> CreateAllRoles()
+        {
+            CreateAllRolesCommand request = new();
+            CreateAllRolesCommandResponse response = await _mediator.Send(request);
             return Ok(response);
         }
     }

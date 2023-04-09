@@ -25,15 +25,23 @@ namespace QuickSalesApp.Persistance.Services.AppServices
 
         public async Task AddAsync(CreateRoleCommand request)
         {
-            AppRole role =  _mapper.Map<AppRole>(request);
+            AppRole role = _mapper.Map<AppRole>(request);
             role.Id = Guid.NewGuid().ToString();
             await _roleManager.CreateAsync(role);
+        }
+        public async Task AddRangeAsync(IEnumerable<AppRole> roles)
+        {
+            foreach (var role in roles)
+            {
+                await _roleManager.CreateAsync(role);
+            }
+
         }
 
         public async Task DeleteAsync(AppRole appRole)
         {
-         
-            await _roleManager.DeleteAsync( appRole);
+
+            await _roleManager.DeleteAsync(appRole);
         }
 
         public async Task<IList<AppRole>> GetAllRolesAync()
@@ -45,7 +53,7 @@ namespace QuickSalesApp.Persistance.Services.AppServices
 
         public async Task<AppRole> GetByCode(string code)
         {
-           AppRole role = await _roleManager.Roles.FirstOrDefaultAsync(x => x.Code == code);
+            AppRole role = await _roleManager.Roles.FirstOrDefaultAsync(x => x.Code == code);
             return role;
         }
 
@@ -59,5 +67,7 @@ namespace QuickSalesApp.Persistance.Services.AppServices
         {
             await _roleManager.UpdateAsync(appRole);
         }
+
+
     }
 }
