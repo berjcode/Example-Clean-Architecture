@@ -91,9 +91,6 @@ namespace QuickSalesApp.Persistance.Migrations.CompanyDb
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Tentant")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 

@@ -6,11 +6,7 @@ using QuickSalesApp.Domain.AppEntities;
 using QuickSalesApp.Domain.Repositories.ProductRepositories;
 using QuickSalesApp.Domain.UnitOfWork;
 using QuickSalesApp.Persistance.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace QuickSalesApp.Persistance.Services.CompanyServices
 {
@@ -31,7 +27,7 @@ namespace QuickSalesApp.Persistance.Services.CompanyServices
 
         public async Task CreateProductAsync(CreateProductRequest request)
         {
-            _context = (CompanyDbContext)_contextService.CreateDbContextInstance(request.Tentant);
+            _context = (CompanyDbContext)_contextService.CreateDbContextInstance(request.CompanyId);
             _commandRepository.SetDbContextInstance(_context);
 
            _unitOfWork.SetDbContextInstance(_context);

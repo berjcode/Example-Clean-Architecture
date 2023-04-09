@@ -13,7 +13,8 @@ namespace QuickSalesApp.Application.Features.CompanyFeatures.ProductFeatures.Com
 
         
         public int CategoryId { get; set; }
-        public string  Tentant { get; set; }
+        public string CompanyId { get; set; }
+      
 
     }
 }

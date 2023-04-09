@@ -94,7 +94,7 @@ C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.WebApi\bin\Debug\
 C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.WebApi\bin\Debug\net7.0\QuickSalesApp.Application.pdb
 C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.WebApi\bin\Debug\net7.0\QuickSalesApp.Infrasturcture.dll
 C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.WebApi\bin\Debug\net7.0\QuickSalesApp.Infrasturcture.pdb
-C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.WebApi\obj\Debug\net7.0\QuickSalesApp.WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.WebApi\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.WebApi\bin\Debug\net7.0\FluentValidation.dll
 C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.WebApi\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\abdbl\OneDrive\Masaüstü\QuickSalesApp\QuickSalesApp.WebApi\obj\Debug\net7.0\QuickSalesApp.WebApi.MvcApplicationPartsAssemblyInfo.cs
