@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace QuickSalesApp.Persistance.Repositories.GenericRepositories.CompanyDbRepositories;
 
-public class CompanyQueryRepository<T> : ICompanyQueryRepository<T> where T : EntityBase
+public class CompanyDbQueryRepository<T> : ICompanyDbQueryRepository<T> where T : EntityBase
 {
     private static readonly Func<CompanyDbContext, int, bool, Task<T>> GetByIdCompiled =
        EF.CompileAsyncQuery((CompanyDbContext context, int id, bool isTracking) =>

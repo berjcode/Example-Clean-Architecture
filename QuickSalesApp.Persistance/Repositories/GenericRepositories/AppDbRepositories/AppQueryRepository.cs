@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace QuickSalesApp.Persistance.Repositories.GenericRepositories.AppDbRepositories;
 
-public sealed class AppQueryRepository<T> : IAppQueryRepository<T> where T : Entity
+public  class AppQueryRepository<T> : IAppQueryRepository<T> where T : Entity
 {
     private static readonly Func<AppDbContext, string, bool, Task<T>> GetByIdCompiled =
       EF.CompileAsyncQuery((AppDbContext context, string id, bool isTracking) =>
@@ -18,11 +18,8 @@ public sealed class AppQueryRepository<T> : IAppQueryRepository<T> where T : Ent
       isTracking == true ? context.Set<T>().FirstOrDefault()
       : context.Set<T>().AsNoTracking().FirstOrDefault());
 
-    private static readonly Func<AppDbContext, Expression<Func<T, bool>>, bool, Task<T>> GetFirstByExpressionCompiled =
-     EF.CompileAsyncQuery((AppDbContext context, Expression<Func<T, bool>> expression, bool isTracking) =>
-     isTracking == true ? context.Set<T>().FirstOrDefault(expression)
-     : context.Set<T>().AsNoTracking().FirstOrDefault(expression));
-
+  
+    
 
     private AppDbContext _context;
     public DbSet<T> Entity { get; set; }
@@ -53,7 +50,12 @@ public sealed class AppQueryRepository<T> : IAppQueryRepository<T> where T : Ent
 
     public async Task<T> GetFirstByExpression(Expression<Func<T, bool>> expression, bool isTracking = true)
     {
-        return await GetFirstByExpressionCompiled(_context, expression, isTracking);
+        T entity = null;
+        if (!isTracking)
+            entity = await Entity.AsNoTracking().Where(expression).FirstOrDefaultAsync();
+         else
+            entity = await Entity.Where(expression).FirstOrDefaultAsync();
+        return entity;
     }
 
     public IQueryable<T> GetWhere(Expression<Func<T, bool>> expression, bool isTracking = true)

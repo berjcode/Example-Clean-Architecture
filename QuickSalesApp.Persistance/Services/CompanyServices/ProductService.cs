@@ -3,7 +3,7 @@ using QuickSalesApp.Application.Features.CompanyFeatures.ProductFeatures.Command
 using QuickSalesApp.Application.Services.CompanyService;
 using QuickSalesApp.Domain;
 using QuickSalesApp.Domain.AppEntities;
-using QuickSalesApp.Domain.Repositories.ProductRepositories;
+using QuickSalesApp.Domain.Repositories.Company.ProductRepositories;
 using QuickSalesApp.Domain.UnitOfWork;
 using QuickSalesApp.Persistance.Context;
 
@@ -16,10 +16,10 @@ namespace QuickSalesApp.Persistance.Services.CompanyServices
         private readonly IProductQueryRepository _queryRepository;
         private readonly IContextService _contextService;
         private CompanyDbContext _context;
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly ICompanyDbUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         public ProductService(IProductCommandRepository commandRepository, IContextService contextService
-            , IUnitOfWork unitOfWork, IMapper mapper, IProductQueryRepository queryRepository)
+            , ICompanyDbUnitOfWork unitOfWork, IMapper mapper, IProductQueryRepository queryRepository)
         {
             _commandRepository = commandRepository;
             _contextService = contextService;

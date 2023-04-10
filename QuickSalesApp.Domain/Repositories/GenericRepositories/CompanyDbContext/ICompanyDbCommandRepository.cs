@@ -2,7 +2,7 @@
 
 namespace QuickSalesApp.Domain.Repositories.GenericRepositories.CompanyDbContext
 {
-    public interface ICompanyCommandRepository<T> : ICompanyRepository<T> where T : EntityBase
+    public interface ICompanyDbCommandRepository<T> : ICompanyDbRepository<T> where T : EntityBase
     {
 
         Task AddAsync(T entity, CancellationToken cancellationToken);

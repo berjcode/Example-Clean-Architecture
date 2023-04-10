@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickSalesApp.Domain.Repositories.ProductRepositories
+namespace QuickSalesApp.Domain.Repositories.Company.ProductRepositories
 {
-    public interface IProductQueryRepository : ICompanyQueryRepository<Product>
+    public interface IProductQueryRepository : ICompanyDbQueryRepository<Product>
     {
     }
 }

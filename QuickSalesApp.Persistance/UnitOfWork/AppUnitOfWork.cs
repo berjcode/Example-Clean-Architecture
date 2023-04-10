@@ -1,0 +1,24 @@
+﻿
+using Microsoft.EntityFrameworkCore;
+using QuickSalesApp.Domain;
+using QuickSalesApp.Persistance.Context;
+
+namespace QuickSalesApp.Persistance.UnitOfWork;
+
+public sealed class AppUnitOfWork : IAppUnitOfWork
+{
+
+    private AppDbContext _context;
+    public async Task<int> SaveChangesAsync(CancellationToken cancellationToken)
+    {
+        int count = await _context.SaveChangesAsync(cancellationToken);
+        return count;
+    }
+
+    public void SetDbContextInstance(DbContext context)
+    {
+        _context = (AppDbContext)context;
+    }
+
+
+}

@@ -5,7 +5,7 @@ using QuickSalesApp.Persistance.Context;
 
 namespace QuickSalesApp.Persistance.Repositories.GenericRepositories.AppDbRepositories;
 
-public sealed class AppCommandRepository<T> : IAppCommandRepository<T> where T : Entity
+public  class AppCommandRepository<T> : IAppCommandRepository<T> where T : Entity
 {
     private static readonly Func<AppDbContext, string, Task<T>> GetByIdCompiled =
             EF.CompileAsyncQuery((AppDbContext context, string id) =>
@@ -13,12 +13,7 @@ public sealed class AppCommandRepository<T> : IAppCommandRepository<T> where T :
 
     private AppDbContext _context;
 
-    public AppCommandRepository(AppDbContext context)
-    {
-        _context = context;
-        Entity = _context.Set<T>();
-    }
-
+ 
 
     public DbSet<T> Entity { get; set; }
 
