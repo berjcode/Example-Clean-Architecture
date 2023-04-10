@@ -3,7 +3,7 @@ using QuickSalesApp.Domain.Repositories.ProductRepositories;
 
 namespace QuickSalesApp.Persistance.Repositories.GenericRepositories.CompanyDbRepositories.ProductRepositories;
 
-public sealed class ProductCommandRepository : CompanyCommanRepository<Product>, IProductCommandRepository
+public sealed class ProductCommandRepository : CompanyCommandRepository<Product>, IProductCommandRepository
 {
 }
 

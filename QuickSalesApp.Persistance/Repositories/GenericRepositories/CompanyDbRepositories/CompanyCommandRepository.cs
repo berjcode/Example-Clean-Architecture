@@ -5,7 +5,7 @@ using QuickSalesApp.Persistance.Context;
 
 namespace QuickSalesApp.Persistance.Repositories.GenericRepositories.CompanyDbRepositories;
 
-    public class CompanyCommanRepository<T> : ICompanyCommandRepository<T> where T : EntityBase
+    public class CompanyCommandRepository<T> : ICompanyCommandRepository<T> where T : EntityBase
     {
         private static readonly Func<CompanyDbContext, int, Task<T>> GetByIdCompiled =
             EF.CompileAsyncQuery((CompanyDbContext context, int id) =>

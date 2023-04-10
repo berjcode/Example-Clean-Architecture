@@ -9,7 +9,7 @@ public interface IAppCommandRepository<T> :IAppRepository<T> where T : Entity
     Task AddRangeAsync(IEnumerable<T> entities, CancellationToken cancellationToken);
     void Update(T entity);
     void UpdateRange(IEnumerable<T> entities);
-    Task RemoveById(int id);
+    Task RemoveById(string id);
     void Remove(T entity);
     void RemoveRange(IEnumerable<T> entities);
 }
