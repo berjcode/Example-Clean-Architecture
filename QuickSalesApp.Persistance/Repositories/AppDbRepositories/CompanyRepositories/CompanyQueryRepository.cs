@@ -8,5 +8,7 @@ namespace QuickSalesApp.Persistance.Repositories.AppDbRepositories.CompanyReposi
 
 public sealed class CompanyQueryRepository : AppQueryRepository<Company>, ICompanyQueryRepository
 {
-   
+    public CompanyQueryRepository(AppDbContext context) : base(context)
+    {
+    }
 }

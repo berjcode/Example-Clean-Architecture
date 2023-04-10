@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace QuickSalesApp.Persistance.Repositories.GenericRepositories.AppDbRepositories;
 
-public  class AppQueryRepository<T> : IAppQueryRepository<T> where T : Entity
+public class AppQueryRepository<T> : IAppQueryRepository<T> where T : Entity
 {
     private static readonly Func<AppDbContext, string, bool, Task<T>> GetByIdCompiled =
       EF.CompileAsyncQuery((AppDbContext context, string id, bool isTracking) =>
@@ -17,19 +17,19 @@ public  class AppQueryRepository<T> : IAppQueryRepository<T> where T : Entity
       EF.CompileAsyncQuery((AppDbContext context, bool isTracking) =>
       isTracking == true ? context.Set<T>().FirstOrDefault()
       : context.Set<T>().AsNoTracking().FirstOrDefault());
+    private readonly AppDbContext _context;
 
-  
-    
 
-    private AppDbContext _context;
+    public AppQueryRepository(AppDbContext context)
+    {
+        _context = context;
+        Entity = _context.Set<T>();
+    }
+
     public DbSet<T> Entity { get; set; }
 
-    public void SetDbContextInstance(DbContext context)
-    {
-        _context = (AppDbContext)context;
-        Entity = _context.Set<T>();
 
-    }
+
     public IQueryable<T> GetAll(bool isTracking = true)
     {
         var result = Entity.AsQueryable();
@@ -53,7 +53,7 @@ public  class AppQueryRepository<T> : IAppQueryRepository<T> where T : Entity
         T entity = null;
         if (!isTracking)
             entity = await Entity.AsNoTracking().Where(expression).FirstOrDefaultAsync();
-         else
+        else
             entity = await Entity.Where(expression).FirstOrDefaultAsync();
         return entity;
     }

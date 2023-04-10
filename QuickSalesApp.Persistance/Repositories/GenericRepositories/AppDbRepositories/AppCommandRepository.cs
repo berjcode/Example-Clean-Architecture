@@ -11,18 +11,21 @@ public  class AppCommandRepository<T> : IAppCommandRepository<T> where T : Entit
             EF.CompileAsyncQuery((AppDbContext context, string id) =>
             context.Set<T>().FirstOrDefault(p => p.Id == id));
 
-    private AppDbContext _context;
+    private readonly AppDbContext _context;
 
- 
+
+    public AppCommandRepository(AppDbContext context)
+    {
+        _context = context;
+        Entity = _context.Set<T>();
+    }
+
+
 
     public DbSet<T> Entity { get; set; }
 
 
-    public void SetDbContextInstance(DbContext context)
-    {
-        _context = (AppDbContext)context;
-        Entity = _context.Set<T>();
-    }
+    
     public async Task AddAsync(T entity, CancellationToken cancellationToken)
     {
         await Entity.AddAsync(entity, cancellationToken);
