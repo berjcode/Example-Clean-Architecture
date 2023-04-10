@@ -1,12 +1,12 @@
 ﻿using QuickSalesApp.Application.Services.AppServices;
 using QuickSalesApp.Application.Services.CompanyService;
-using QuickSalesApp.Domain.Repositories.ProductRepositories;
 using QuickSalesApp.Domain.UnitOfWork;
 using QuickSalesApp.Domain;
-using QuickSalesApp.Persistance.Repositories.ProductRepositories;
 using QuickSalesApp.Persistance.Services.AppServices;
 using QuickSalesApp.Persistance.Services.CompanyServices;
 using QuickSalesApp.Persistance.UnitOfWork;
+using QuickSalesApp.Persistance.Repositories.GenericRepositories.CompanyDbRepositories.ProductRepositories;
+using QuickSalesApp.Domain.Repositories.ProductRepositories;
 
 namespace QuickSalesApp.WebApi.Configurations
 {
