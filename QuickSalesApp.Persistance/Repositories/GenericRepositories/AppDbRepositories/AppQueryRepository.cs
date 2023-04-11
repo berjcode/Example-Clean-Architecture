@@ -10,13 +10,13 @@ public class AppQueryRepository<T> : IAppQueryRepository<T> where T : Entity
 {
     private static readonly Func<AppDbContext, string, bool, Task<T>> GetByIdCompiled =
       EF.CompileAsyncQuery((AppDbContext context, string id, bool isTracking) =>
-  isTracking == true ? context.Set<T>().FirstOrDefault(p => p.Id == id) :
-       context.Set<T>().AsNoTracking().FirstOrDefault(p => p.Id == id));
+   context.Set<T>().FirstOrDefault(p => p.Id == id));
+
 
     private static readonly Func<AppDbContext, bool, Task<T>> GetFirstCompiled =
       EF.CompileAsyncQuery((AppDbContext context, bool isTracking) =>
-      isTracking == true ? context.Set<T>().FirstOrDefault()
-      : context.Set<T>().AsNoTracking().FirstOrDefault());
+       context.Set<T>().FirstOrDefault());
+
     private readonly AppDbContext _context;
 
 
@@ -48,13 +48,13 @@ public class AppQueryRepository<T> : IAppQueryRepository<T> where T : Entity
         return await GetFirstCompiled(_context, isTracking);
     }
 
-    public async Task<T> GetFirstByExpression(Expression<Func<T, bool>> expression, bool isTracking = true)
+    public async Task<T> GetFirstByExpression(Expression<Func<T, bool>> expression, CancellationToken cancellationToken, bool isTracking = true)
     {
         T entity = null;
         if (!isTracking)
-            entity = await Entity.AsNoTracking().Where(expression).FirstOrDefaultAsync();
+            entity = await Entity.AsNoTracking().Where(expression).FirstOrDefaultAsync(cancellationToken);
         else
-            entity = await Entity.Where(expression).FirstOrDefaultAsync();
+            entity = await Entity.Where(expression).FirstOrDefaultAsync(cancellationToken);
         return entity;
     }
 

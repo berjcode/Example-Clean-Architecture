@@ -37,7 +37,7 @@ public sealed class RoleList
         return appRoles;
     }
 
-    public static IList<MainRole> GetStaticMainRoles()
+    public static List<MainRole> GetStaticMainRoles()
     {
         List<MainRole> mainRoles = new List<MainRole>
         {

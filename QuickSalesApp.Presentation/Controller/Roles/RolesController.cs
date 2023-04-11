@@ -19,14 +19,14 @@ namespace QuickSalesApp.Presentation.Controller.Role
 
         [HttpPost("[action]")]
 
-        public async Task<IActionResult> CreateRole(CreateRoleCommand request)
+        public async Task<IActionResult> Create(CreateRoleCommand request)
         {
             CreateRoleCommandResponse response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> GetAllRoles()
+        public async Task<IActionResult> GetAll()
         {
             GetAllRolesQuery request = new GetAllRolesQuery();
             GetAllRolesQueryResponse response = await _mediator.Send(request);
@@ -35,7 +35,7 @@ namespace QuickSalesApp.Presentation.Controller.Role
 
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> UpdateRole(UpdateRoleCommand request)
+        public async Task<IActionResult> Update(UpdateRoleCommand request)
         {
             UpdateRoleCommandResponse response = await _mediator.Send(request);
             return Ok(response);
@@ -44,7 +44,7 @@ namespace QuickSalesApp.Presentation.Controller.Role
 
         [HttpGet("[action]/{id}")]
 
-        public async Task<IActionResult> DeleteRole(string id)
+        public async Task<IActionResult>  Remove(string id)
         {
             DeleteRoleCommand request = new(id);
 

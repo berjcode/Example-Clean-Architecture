@@ -2,11 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Commands.Login;
 using QuickSalesApp.Presentation.Abstraction;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace QuickSalesApp.Presentation.Controller.Auth
 {

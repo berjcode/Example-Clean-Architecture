@@ -7,7 +7,6 @@ using QuickSalesApp.Domain.AppEntities;
 using QuickSalesApp.Domain.Repositories.App.CompanyRepositories;
 using QuickSalesApp.Persistance.Context;
 
-
 namespace QuickSalesApp.Persistance.Services.AppServices;
 
 public sealed class CompanyService : ICompanyService
@@ -41,9 +40,14 @@ public sealed class CompanyService : ICompanyService
         await _appUnitOfWork.SaveChangesAsync(cancellationToken);
     }
 
-    public async Task<Company?> GetCompanyByName(string name)
+    public IQueryable<Company> GetAll()
     {
-        return await _companyQueryRepository.GetFirstByExpression(p => p.Name == name);
+        return _companyQueryRepository.GetAll();
+    }
+
+    public async Task<Company?> GetCompanyByName(string name,CancellationToken cancellationToken)
+    {
+        return await _companyQueryRepository.GetFirstByExpression(p => p.Name == name,cancellationToken);
     }
 
     public async Task MigrateCompanyDatabases()

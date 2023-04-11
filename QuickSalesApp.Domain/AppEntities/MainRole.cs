@@ -4,6 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace QuickSalesApp.Domain.AppEntities;
 public sealed class MainRole : Entity
 {
+    public MainRole()
+    {
+
+    }
     public MainRole(string id, string title, bool isRoleCreatedByAdmin = false, string companyId = null) : base(id)
     {
         Title = title;

@@ -15,7 +15,7 @@ namespace QuickSalesApp.Application.Features.AppFeatures.CompanyFeatures.Command
 
         public async Task<CreateCompanyCommandResponse> Handle(CreateCompanyCommand request, CancellationToken cancellationToken)
         {
-            Company company = await _companyService.GetCompanyByName(request.Name);
+            Company company = await _companyService.GetCompanyByName(request.Name,cancellationToken);
             if (company != null) throw new Exception("Bu şirket Kayıtı yapılmıştır.");
             await _companyService.CreateCompany(request,cancellationToken);
             return new();

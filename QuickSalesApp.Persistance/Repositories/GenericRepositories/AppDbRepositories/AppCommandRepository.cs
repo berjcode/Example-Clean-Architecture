@@ -31,7 +31,7 @@ public  class AppCommandRepository<T> : IAppCommandRepository<T> where T : Entit
         await Entity.AddAsync(entity, cancellationToken);
     }
 
-    public async Task AddRangeAsync(IEnumerable<T> entities, CancellationToken cancellationToken)
+    public async Task AddRangeAsync(IEnumerable<T> entities, CancellationToken cancellationToken )
     {
         await Entity.AddRangeAsync(entities, cancellationToken);
     }

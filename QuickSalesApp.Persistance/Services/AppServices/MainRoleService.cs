@@ -26,10 +26,39 @@ public class MainRoleService : IMainRoleService
         await _appUnitOfWork.SaveChangesAsync(cancellationToken);
     }
 
-    public async Task<MainRole> GetByTitleAndCompanyId(string title, string companyId)
+    public async Task CreateRangeAsync(List<MainRole> newMainRoles, CancellationToken cancellationToken)
     {
-       //if(companyId == null) return await _mainRoleQueryRepository.GetFirstByExpression(p => p.Title == title);
+        await _mainRoleCommadRepository.AddRangeAsync(newMainRoles,cancellationToken);
 
-       return await _mainRoleQueryRepository.GetFirstByExpression(p =>p.Title == title && p.CompanyId == companyId,false);
+        await _appUnitOfWork.SaveChangesAsync(cancellationToken);
+    }
+
+    public IQueryable<MainRole> GetAll()
+    {
+        return _mainRoleQueryRepository.GetAll();
+    }
+
+    public async Task<MainRole> GetByIdAsync(string id)
+    {
+        return await _mainRoleQueryRepository.GetById(id);
+    }
+
+    public async Task<MainRole> GetByTitleAndCompanyId(string title, string companyId,CancellationToken cancellationToken)
+    {
+       //if(companyId == null) return await _mainRoleQueryRepository.GetFirstByExpression(p => p.Title == title,false);
+
+       return await _mainRoleQueryRepository.GetFirstByExpression(p =>p.Title == title && p.CompanyId == companyId,cancellationToken,false);
+    }
+
+    public async Task RemoveByIdAsync(string id)
+    {
+        await _mainRoleCommadRepository.RemoveById(id);
+        await _appUnitOfWork.SaveChangesAsync();
+    }
+
+    public async Task UpdateAsync(MainRole mainRole)
+    {
+        _mainRoleCommadRepository.Update(mainRole);
+        await _appUnitOfWork.SaveChangesAsync();
     }
 }

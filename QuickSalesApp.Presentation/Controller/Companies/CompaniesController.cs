@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using QuickSalesApp.Application.Features.AppFeatures.CompanyFeatures.Commands.CreateCompany;
 using QuickSalesApp.Application.Features.AppFeatures.CompanyFeatures.Commands.MigrateCompanyDatabase;
+using QuickSalesApp.Application.Features.AppFeatures.CompanyFeatures.Queries.GetAllCompany;
 using QuickSalesApp.Presentation.Abstraction;
 
 namespace QuickSalesApp.Presentation.Controller.Companies
@@ -14,7 +15,7 @@ namespace QuickSalesApp.Presentation.Controller.Companies
 
         [HttpPost("[action]")]
 
-        public async Task<IActionResult> CreateCompany(CreateCompanyCommand request, CancellationToken cancellationToken)
+        public async Task<IActionResult> Create(CreateCompanyCommand request, CancellationToken cancellationToken)
         {
             CreateCompanyCommandResponse response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
@@ -31,6 +32,20 @@ namespace QuickSalesApp.Presentation.Controller.Companies
             MigrateCompanyDatabaseCommandResponse response = await _mediator.Send(request);
             return Ok(response);
         }
+
+
+        [HttpGet("[action]")]
+
+        public async Task<IActionResult> GetAll()
+        {
+            GetAllCompanyQuery request = new();
+            GetAllCompanyQueryResponse response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
+
+
+
 
 
     }

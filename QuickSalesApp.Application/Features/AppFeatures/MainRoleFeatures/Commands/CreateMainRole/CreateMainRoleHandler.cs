@@ -17,14 +17,14 @@ public sealed class CreateMainRoleHandler : ICommandHandler<CreateMainRoleComman
     public async Task<CreateMainRoleResponse> Handle(CreateMainRoleCommand request, CancellationToken cancellationToken)
     {
 
-        MainRole checkMainRoleTitle = await _mainRoleService.GetByTitleAndCompanyId(request.Title, request.CompanyId);
+        MainRole checkMainRoleTitle = await _mainRoleService.GetByTitleAndCompanyId(request.Title, request.CompanyId,cancellationToken);
         if (checkMainRoleTitle != null) throw new Exception("Bu Rol Daha Önce Oluşturulmuştur.");
 
 
         MainRole mainRole = new(
             Guid.NewGuid().ToString(),
             request.Title,
-            request.IsRoleCreatedByAdmin,
+          request.CompanyId != null ? false : true ,
             request.CompanyId);
 
         await _mainRoleService.CreateAsync(mainRole, cancellationToken);
