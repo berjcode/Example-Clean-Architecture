@@ -1,4 +1,6 @@
-﻿using QuickSalesApp.Domain.AppEntities.Identity;
+﻿using QuickSalesApp.Domain.AppEntities;
+using QuickSalesApp.Domain.AppEntities.Identity;
+using System.Security.Cryptography.X509Certificates;
 
 namespace QuickSalesApp.Domain.Roles;
 
@@ -8,6 +10,8 @@ public sealed class RoleList
     public static List<AppRole> GetStaticRoles()
     {
         List<AppRole> appRoles = new List<AppRole>();
+        
+       
         #region ProductRole
         appRoles.Add(new AppRole(
             title: Product,
@@ -33,7 +37,20 @@ public sealed class RoleList
         return appRoles;
     }
 
+    public static IList<MainRole> GetStaticMainRoles()
+    {
+        List<MainRole> mainRoles = new List<MainRole>
+        {
+            new MainRole(
+                    Guid.NewGuid().ToString(),"Admin",true),
+             new MainRole(
+                    Guid.NewGuid().ToString(),"Yönetici",true),
+              new MainRole(
+                    Guid.NewGuid().ToString(),"Kasiyer",true),
+        };
+        return mainRoles;
 
+    }
     #region RoleTitleNames
     public static string Product = "Ürünler";
     #endregion
