@@ -50,6 +50,7 @@ public sealed class CompanyService : ICompanyService
         return await _companyQueryRepository.GetFirstByExpression(p => p.Name == name,cancellationToken);
     }
 
+  
     public async Task MigrateCompanyDatabases()
     {
         var compaines = await _companyQueryRepository.GetAll().ToListAsync();

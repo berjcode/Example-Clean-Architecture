@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\AppFeatures\AppUserFeatures\Commands\" />
     <Folder Include="Features\AppFeatures\AppUserFeatures\Queryies\" />
+    <Folder Include="Features\AppFeatures\AuthFeatures\Queries\" />
     <Folder Include="Features\AppFeatures\MainRoleAndUserRL\Queries\" />
     <Folder Include="Features\AppFeatures\UserAndCompanyRL\Queries\" />
   </ItemGroup>

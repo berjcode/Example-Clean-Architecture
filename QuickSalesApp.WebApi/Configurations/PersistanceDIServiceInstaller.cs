@@ -61,6 +61,8 @@ public class PersistanceDIServiceInstaller : IServiceInstaller
 
 
         #region ServicesApp
+        //Auth
+        services.AddScoped<IAuthService , AuthService>();
         services.AddScoped<ICompanyService, CompanyService>();
         //MainRole
         services.AddScoped<IMainRoleService, MainRoleService>();

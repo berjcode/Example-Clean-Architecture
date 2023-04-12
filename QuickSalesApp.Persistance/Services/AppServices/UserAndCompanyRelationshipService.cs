@@ -1,4 +1,5 @@
-﻿using QuickSalesApp.Application.Services.AppServices;
+﻿using Microsoft.EntityFrameworkCore;
+using QuickSalesApp.Application.Services.AppServices;
 using QuickSalesApp.Domain;
 using QuickSalesApp.Domain.AppEntities;
 using QuickSalesApp.Domain.Repositories.App.UserAndCompanyRepositories;
@@ -34,6 +35,11 @@ public sealed class UserAndCompanyRelationshipService : IUserAndCompanyRelations
     {
         return await _queryRepository.GetFirstByExpression(p => p.AppUserId == userId && p.CompanyId == companyId, cancellationToken);
 
+    }
+
+    public async Task<IList<UserAndCompanyRelationship>> GetListByUserId(string userId)
+    {
+        return await _queryRepository.GetWhere(p => p.AppUserId ==userId).Include("Company").ToListAsync();    
     }
 
     public async Task RemoveByIdAsync(string id)

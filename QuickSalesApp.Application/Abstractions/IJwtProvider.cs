@@ -1,14 +1,9 @@
 ﻿using QuickSalesApp.Domain.AppEntities.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using QuickSalesApp.Domain.Dtos;
 
-namespace QuickSalesApp.Application.Abstractions
+namespace QuickSalesApp.Application.Abstractions;
+
+public interface IJwtProvider
 {
-  public interface IJwtProvider
-    {
-        Task<string> CreateTokenAsync (AppUser user, List<string> roles);
-    }
+    Task<TokenRefreshTokenDto> CreateTokenAsync (AppUser user);
 }
