@@ -22,8 +22,4 @@
     <ProjectReference Include="..\QuickSalesApp.Domain\QuickSalesApp.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UnitOfWorks\" />
-  </ItemGroup>
-
 </Project>
