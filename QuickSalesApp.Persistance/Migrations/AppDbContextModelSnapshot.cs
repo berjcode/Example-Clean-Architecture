@@ -210,6 +210,37 @@ namespace QuickSalesApp.Persistance.Migrations
                     b.ToTable("MainAndRoleRelationShips");
                 });
 
+            modelBuilder.Entity("QuickSalesApp.Domain.AppEntities.MainRoleAndUserRelationship", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CompanyId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MainRoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
+
+                    b.HasIndex("MainRoleId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("MainRoleAndUserRelationships");
+                });
+
             modelBuilder.Entity("QuickSalesApp.Domain.AppEntities.UserAndCompanyRelationship", b =>
                 {
                     b.Property<string>("Id")
@@ -256,6 +287,27 @@ namespace QuickSalesApp.Persistance.Migrations
                         .HasForeignKey("RoleId");
 
                     b.Navigation("AppRole");
+
+                    b.Navigation("MainRole");
+                });
+
+            modelBuilder.Entity("QuickSalesApp.Domain.AppEntities.MainRoleAndUserRelationship", b =>
+                {
+                    b.HasOne("QuickSalesApp.Domain.AppEntities.Company", "Company")
+                        .WithMany()
+                        .HasForeignKey("CompanyId");
+
+                    b.HasOne("QuickSalesApp.Domain.AppEntities.MainRole", "MainRole")
+                        .WithMany()
+                        .HasForeignKey("MainRoleId");
+
+                    b.HasOne("QuickSalesApp.Domain.AppEntities.Identity.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Company");
 
                     b.Navigation("MainRole");
                 });
