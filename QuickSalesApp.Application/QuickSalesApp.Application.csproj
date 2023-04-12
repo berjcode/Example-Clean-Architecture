@@ -13,8 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Features\AppFeatures\AppUserFeatures\Queryies\" />
-    <Folder Include="Features\AppFeatures\MainRoleandRole\Commands\" />
-    <Folder Include="Features\AppFeatures\MainRoleandRole\Queries\" />
     <Folder Include="Features\AppFeatures\MainRoleAndUser\Commands\" />
     <Folder Include="Features\AppFeatures\MainRoleAndUser\Queries\" />
     <Folder Include="Features\AppFeatures\UserAndCompany\Commands\" />
