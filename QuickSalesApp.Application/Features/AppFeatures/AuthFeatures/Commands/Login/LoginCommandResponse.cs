@@ -9,5 +9,5 @@ public sealed record LoginCommandResponse(
        string Name,
        string SurName,
        IList<CompanyDto> Companies,
-  
+
        CompanyDto Company);

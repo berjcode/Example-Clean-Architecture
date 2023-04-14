@@ -10,5 +10,8 @@ public interface IMainRoleAndUserRelationshipService
 
     Task<MainRoleAndUserRelationship> GetByIdAsync(string id, bool isTracking);
 
+    Task<MainRoleAndUserRelationship> GetRolesByUserIdAndCompanyId(string userId, string companyId);
+
+
 
 }

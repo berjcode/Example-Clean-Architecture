@@ -10,4 +10,5 @@ public interface IAuthService
     Task<bool> CheckPasswordAsync(AppUser user , string password);
 
     Task<IList<UserAndCompanyRelationship>> GetCompanyListByUserIdAsync(string userId);
+    Task<IList<string>> GetRolesByUserIdAndCompanyId(string userId, string companyId);
 }

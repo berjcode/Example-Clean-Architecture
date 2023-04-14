@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using QuickSalesApp.Application.Abstractions;
-using QuickSalesApp.Application.Features.AppFeatures.AuthFeatures.Commands.Login;
 using QuickSalesApp.Application.Messaging;
 using QuickSalesApp.Application.Services.AppServices;
 using QuickSalesApp.Domain.AppEntities;
 using QuickSalesApp.Domain.AppEntities.Identity;
 using QuickSalesApp.Domain.Dtos;
 
-namespace QuickSalesApp.Application.Features.AppFeatures.AppUserFeatures.Commands.Login
+namespace QuickSalesApp.Application.Features.AppFeatures.AuthFeatures.Commands.Login
 {
     public class LoginCommandHandler : ICommandHandler<LoginCommand, LoginCommandResponse>
     {

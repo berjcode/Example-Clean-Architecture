@@ -1,4 +1,5 @@
-﻿using QuickSalesApp.Application.Services.AppServices;
+﻿using Microsoft.EntityFrameworkCore;
+using QuickSalesApp.Application.Services.AppServices;
 using QuickSalesApp.Domain;
 using QuickSalesApp.Domain.AppEntities;
 using QuickSalesApp.Domain.Repositories.App.MainRoleAndRoleRepositories;
@@ -34,6 +35,11 @@ public class MainRoleAndRoleRelationshipService : IMainRoleAndRoleRelationshipSe
     public async Task<MainRoleAndRoleRelationShip> GetByIdAsync(string id)
     {
         return await _mainRoleAndRoleQueryRepositories.GetById(id);
+    }
+
+    public async Task<IList<MainRoleAndRoleRelationShip>> GetByMainRoleIdForGetRolesAsync(string id)
+    {
+      return await _mainRoleAndRoleQueryRepositories.GetWhere(p=> p.MainRoleId == id).Include("AppRole").ToListAsync();
     }
 
     public async Task<MainRoleAndRoleRelationShip> GetByRoleIdAndMainRoleId(string roleId, string mainRoleId, CancellationToken cancellationToken =default)
